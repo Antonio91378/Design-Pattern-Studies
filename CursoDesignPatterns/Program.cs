@@ -9,15 +9,15 @@ namespace CursoDesignPatterns
     class program
     {
         //Este é um exemplo do padrao de projeto 'Strategy'
+        //exemplo teste para o exercício de investimentos
         static void Main(string[] args)
         {
-            var iss = new Iss();
-            var icms = new Icms();
-
-            Orcamento orcamento = new Orcamento(5000.0);
-            CalculadorDeImpostos calculador = new CalculadorDeImpostos();
-
-            calculador.RealizaCalculo(orcamento, icms);
+            var conta1 = new ContaBancaria();
+            // criando um investimento arrojado por exemplo
+            var investimentoArrojado = new InvestimentoArrojado();
+            // saldo inicial das contas criadas = 100.
+            var investidor = new RealizadorDeInvestimentos();
+            investidor.RealizaInvestimento(investimentoArrojado, conta1);
         }
     }
 }

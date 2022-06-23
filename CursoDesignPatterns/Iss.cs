@@ -10,7 +10,7 @@ namespace CursoDesignPatterns
     {
         public double Calcula(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.06;
+            return (orcamento.Valor * 0.06) + 50;
         }
 
     }
