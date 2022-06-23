@@ -8,6 +8,7 @@ namespace CursoDesignPatterns
 {
     class program
     {
+        //Este é um exemplo do padrao de projeto 'Strategy'
         static void Main(string[] args)
         {
             var iss = new Iss();
