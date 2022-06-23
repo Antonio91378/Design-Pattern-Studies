@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    public class Iss
+    public class Iss : IImposto
     {
-        public double CalculaIss(Orcamento orcamento)
+        public double Calcula(Orcamento orcamento)
         {
             return orcamento.Valor * 0.06;
         }
+
     }
 }

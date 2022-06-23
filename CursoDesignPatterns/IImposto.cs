@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    public class Orcamento
+    public interface IImposto
     {
-        public double Valor { get; private set; }
-        public Orcamento(double valor)
-        {
-            Valor = valor;
-        }
+        double Calcula(Orcamento orcamento);
     }
 }
