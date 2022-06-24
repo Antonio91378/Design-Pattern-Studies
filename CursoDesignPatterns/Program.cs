@@ -8,16 +8,16 @@ namespace CursoDesignPatterns
 {
     class program
     {
-        //Este é um exemplo do padrao de projeto 'Strategy'
-        //exemplo teste para o exercício de investimentos
+        //Este é um exemplo do padrao de projeto 'Chain of Responsability'
         static void Main(string[] args)
         {
-            var conta1 = new ContaBancaria();
-            // criando um investimento arrojado por exemplo
-            var investimentoArrojado = new InvestimentoArrojado();
-            // saldo inicial das contas criadas = 100.
-            var investidor = new RealizadorDeInvestimentos();
-            investidor.RealizaInvestimento(investimentoArrojado, conta1);
+            var calculador = new CalculadorDeDescontos();
+            var orcamento = new Orcamento(500);
+            orcamento.AdicionaItem(new Item("Caneta", 250));
+            orcamento.AdicionaItem(new Item("Lapis", 250));
+
+            double desconto = calculador.Calcula(orcamento);
+
         }
     }
 }
