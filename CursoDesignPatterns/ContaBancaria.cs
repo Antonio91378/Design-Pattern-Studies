@@ -2,16 +2,12 @@ namespace CursoDesignPatterns
 {
     public class ContaBancaria
     {
+        public string Nome { get; }
         public double Saldo { get; private set; }
-        public ContaBancaria()
+        public ContaBancaria(string nome)
         {
-            //saldo de exemplo
+            this.Nome = nome;
             Saldo = 100.0;
         }
-        public void GanhosDeInvestimento(double _valor)
-        {
-            Saldo += _valor;
-        }
-
     }
 }
