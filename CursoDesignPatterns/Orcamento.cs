@@ -10,13 +10,14 @@ namespace CursoDesignPatterns
     {
         public double Valor { get; private set; }
         public IList<Item> Itens { get; private set; }
-        public Orcamento(double valor)
+        public Orcamento()
         {
-            Valor = valor;
+            this.Valor = 0;
             Itens = new List<Item>();
         }
         public void AdicionaItem(Item item)
         {
+            this.Valor += item.Valor;
             Itens.Add(item);
         }
     }

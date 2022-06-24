@@ -12,11 +12,14 @@ namespace CursoDesignPatterns
         static void Main(string[] args)
         {
             var calculador = new CalculadorDeDescontos();
-            var orcamento = new Orcamento(500);
-            orcamento.AdicionaItem(new Item("Caneta", 250));
-            orcamento.AdicionaItem(new Item("Lapis", 250));
+            var orcamento = new Orcamento();
+            var item1 = new Item("lapis", 10.0);
+            var item2 = new Item("caneta", 10.0);
+            orcamento.AdicionaItem(item1);
+            orcamento.AdicionaItem(item2);
 
             double desconto = calculador.Calcula(orcamento);
+            System.Console.WriteLine(desconto);
 
         }
     }

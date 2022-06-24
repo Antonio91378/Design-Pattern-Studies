@@ -4,7 +4,7 @@ namespace CursoDesignPatterns
     {
         public Item(string nome, double valor)
         {
-            this.Nome = nome;
+            this.Nome = nome.ToUpper();
             this.Valor = valor;
         }
 
