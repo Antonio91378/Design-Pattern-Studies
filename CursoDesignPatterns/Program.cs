@@ -17,7 +17,7 @@ namespace CursoDesignPatterns
             //lembrar de printar a ordem quando nao der certo :)
             var formatItem1 = new FormatItem("antonio,100", 1);
             var formatItem2 = new FormatItem("antonio%100", 2);
-            var formatItem3 = new FormatItem("<nome>antonio</nome><saldo>100</saldo>", 3);//Identificação XML não funcionando ainda
+            var formatItem3 = new FormatItem("<nome>antonio</nome><saldo>100</saldo>", 3);//Identificação XML não funcionando corretamente ainda.
             requisicoes.Add(new Requisicao(formatItem1));
             requisicoes.Add(new Requisicao(formatItem2));
             requisicoes.Add(new Requisicao(formatItem3));
