@@ -3,17 +3,13 @@ namespace CursoDesignPatterns
     public class Requisicao
     {
 
-
-        public List<FormatItem> FormatItens { get; private set; }
-        public Requisicao()
+        public FormatItem FormatItens { get; private set; }
+        public Requisicao(FormatItem formatItem)
         {
+            this.FormatItens = formatItem;
+        }
 
-            FormatItens = new List<FormatItem>();
-        }
-        public void AdicionarFormatItem(FormatItem formatItem)
-        {
-            FormatItens.Add(formatItem);
-        }
+
 
     }
 }

@@ -6,7 +6,7 @@ namespace CursoDesignPatterns.formatos
 
         public string Checar(Requisicao requisicao)
         {
-            throw new NotImplementedException();
+            return $" Requisicao {requisicao.FormatItens.OrdemDaRequisicao} não identificada.";
         }
     }
 }

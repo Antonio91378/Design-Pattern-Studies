@@ -13,12 +13,18 @@ namespace CursoDesignPatterns
         {
 
             var identificador = new IdentificadorDeFormatos();
-            var requisicao = new Requisicao();
+            var requisicoes = new List<Requisicao>();
             //lembrar de printar a ordem quando nao der certo :)
-            var formatItem1 = new FormatItem("antonio,100,programador", 1);
-            requisicao.AdicionarFormatItem(formatItem1);
-            string identificacao = identificador.Identifica(requisicao);
-            System.Console.WriteLine(identificacao);
+            var formatItem1 = new FormatItem("antonio,100", 1);
+            var formatItem2 = new FormatItem("antonio%100", 2);
+            var formatItem3 = new FormatItem("<nome>antonio</nome><saldo>100</saldo>", 3);//Identificação XML não funcionando ainda
+            requisicoes.Add(new Requisicao(formatItem1));
+            requisicoes.Add(new Requisicao(formatItem2));
+            requisicoes.Add(new Requisicao(formatItem3));
+            ResultadoDaRequisicao.AdicionaResultado(identificador.Identifica(requisicoes[0]));
+            ResultadoDaRequisicao.AdicionaResultado(identificador.Identifica(requisicoes[1]));
+            ResultadoDaRequisicao.AdicionaResultado(identificador.Identifica(requisicoes[2]));
+            ResultadoDaRequisicao.MostrarResultados();
         }
     }
 }

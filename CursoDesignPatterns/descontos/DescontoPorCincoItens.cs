@@ -9,7 +9,7 @@ namespace CursoDesignPatterns
             {
                 return orcamento.Valor * 0.1;
             }
-            return Proximo.Desconta(orcamento);
+            return Proximo.Desconta(orcamento); 
         }
     }
 }
